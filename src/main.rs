@@ -2,6 +2,10 @@ mod slack;
 
 use slack::bot::SlackBot;
 
+use std::thread::sleep;
+use std::time::Duration;
+
+/*
 use std::error::Error;
 
 use base64::{engine::general_purpose::STANDARD, Engine as _};
@@ -11,9 +15,10 @@ use reqwest::{
     Response,
     //StatusCode,
 };
-
+*/
 /// fetches the installations from wpengine using a token consisting of a uuid and pass string.
 /// If it can't fetch from the server it sends a message in slack
+/*
 async fn get_installs() -> Result<Response, Box<dyn Error>> {
     let client = Client::new();
 
@@ -40,13 +45,19 @@ async fn get_installs() -> Result<Response, Box<dyn Error>> {
 
     Ok(result)
 }
-
+*/
 
 #[tokio::main]
 async fn main() {
     let testbot = SlackBot::new();
     testbot.send_test().await;
-    testbot.send_message("SENDIT").await;
+    testbot.send_message("Alive.").await;
+
+    let waittime = Duration::from_secs(5 * 60);
+    loop {
+        testbot.get_installs().await;
+        sleep(waittime);
+    }
 
     // match res_code {
     //     StatusCode::OK => println!(""),
