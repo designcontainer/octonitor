@@ -1,0 +1,7 @@
+- [ ] Code needs to be able to handle some more issues and errors
+- [ ] Take input from the chat
+  - [ ] Read the chat
+  - [ ] add and remove domains
+  - [ ] file needs to reflect the changes from the updates given from the slack chat
+  - [ ] Reload itself
+- [ ] Docker so it can experience SPEED
