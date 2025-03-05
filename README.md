@@ -41,3 +41,7 @@ Here we see an example where we use the script to build the container image. Pre
 bash run.sh podman run
 ```
 This will put you into a interactive shell.
+=======
+# Octonitor monitoring bot
+
+For monitoring the status of wordpress installations. It sends messages on Slack, cool.
