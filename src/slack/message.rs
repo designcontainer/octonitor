@@ -15,4 +15,4 @@ impl SlackMessage {
     }
 }
 
-pub struct SlackErrorMessage;
+//pub struct SlackErrorMessage;

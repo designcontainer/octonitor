@@ -84,7 +84,7 @@ impl SlackBot {
             .send()
             .await;
         /* let result = */ match response {
-            Ok(gem) => {},
+            Ok(_) => {},
             Err(e) => println!("Error: Sending the message produced some problems: {}", e),
         };
     } // send_message
@@ -102,7 +102,7 @@ impl SlackBot {
             .send()
             .await;
         /* let result = */ match response {
-            Ok(gem) => {},
+            Ok(_) => {},
             Err(coal) => println!("Could not send message. Error: {}", coal),
         };
     } // send_error
