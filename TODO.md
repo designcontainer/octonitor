@@ -3,5 +3,6 @@
   - [ ] Read the chat
   - [ ] add and remove domains
   - [ ] file needs to reflect the changes from the updates given from the slack chat
-  - [ ] Reload itself
-- [ ] Docker so it can experience SPEED
+  - [ ] Reload itself with the new domain now being ignored
+- [ ] Making it work in docker
+    - [ ] Persistent volume for the domains to ignore
