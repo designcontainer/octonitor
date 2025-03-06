@@ -12,7 +12,7 @@ List over functionality:
 # Code what and how
 Description of the files:
 
-## Rust files 
+## Rust files
 
 `endpoint.rs` - This file contains the structs for the Slack api endpoints. This was to make serialization (turning into json) easier, but it is kinda akward. Oh yeah and it's also so I don't have to manually write the method every time, but idk if the abstraction is really necessary here.
 
@@ -21,13 +21,14 @@ Description of the files:
 `bot.rs`      - Actual bot code that sends the messages and stuff. Kinda self explanitory just a little worse than plain English.
 
 ## Documentation files
-´something.excalidraw´ - This is a diagram of the monitor tool made on the [excalidraw](https://excalidraw) so somewhere on the site there is probably an option to import files or just drag 'n drop the file over.
+`something.excalidraw` - This is a diagram of the monitor tool made on the [excalidraw](https://excalidraw) so somewhere on the site there is probably an option to import files or just drag 'n drop the file over.
 
-´gaming.json´ - The json response returned from the server. Good if you need to debug or rewrite my shitty code. So atleast in the year of our lord 2025 that is what the response looked like.
+`gaming.json` - The json response returned from the server. Good if you need to debug or rewrite my shitty code. So atleast in the year of our lord 2025 that is what the response looked like.
 
 ## Misc files
-´to.ignore´   - This is the file that contains the domains to ignore. It should be placed into a persistent volume when ran in a containerized environtment. Otherwise just make it accesible to the binary, to find the place where it is loaded in the rs shit do `grep -rnH --exclude-dir=target "to.ignore" ./*` from the project root where this file is.
+`to.ignore`   - This is the file that contains the domains to ignore. It should be placed into a persistent volume when ran in a containerized environtment. Otherwise just make it accesible to the binary, to find the place where it is loaded in the rs shit do `grep -rnH --exclude-dir=target "to.ignore" ./*` from the project root where this file is.
 
+`.secrets`    - Very important see the 1Password secret note named "Octonitor secrets" it contains what you need to paste into ".secrets" before you run the project.
 # Dockershit
 Most of the file is pretty self explanitory. To be general the Dockerfile does the following:
 - Get the Rust image
