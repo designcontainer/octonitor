@@ -175,7 +175,7 @@ impl SlackBot {
     } // check_installs()
     fn load_checklist() -> io::Result<Vec<String>> {
         let mut tmp: Vec<String> = Vec::new();
-        let path = path::Path::new("ignore.txt");
+        let path = path::Path::new("to.ignore");
         let file = match fs::File::open(&path) {
             Err(e) => panic!("Could not open to.ignore: {}", e),
             Ok(file) => file,
